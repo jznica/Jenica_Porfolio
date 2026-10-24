@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jenica A. &middot; A Portfolio in the Bridgerton Style</title>
+<title>Jenica A. &middot; AI/ML, Reinforcement Learning &amp; Graph Learning</title>
+<meta name="description" content="Jenica A. — B.Tech AI &amp; ML student at SIMATS, Chennai (2028). Research in reinforcement learning credit assignment, graph neural networks and explainable AI. Builder of Adrian AI and Orbit." />
+<meta name="author" content="Jenica A." />
+<link rel="canonical" href="https://jenica-porfolio.vercel.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jenica-porfolio.vercel.app/" />
+<meta property="og:title" content="Jenica A. · AI/ML, Reinforcement Learning & Graph Learning" />
+<meta property="og:description" content="Research in RL credit assignment, GNNs and explainable AI. B.Tech AI & ML, SIMATS, 2028." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Jenica A. · AI/ML, Reinforcement Learning & Graph Learning" />
+<meta name="twitter:description" content="Research in RL credit assignment, GNNs and explainable AI. B.Tech AI & ML, SIMATS, 2028." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -21,6 +31,7 @@
     line-height:1.7;min-height:100vh;overflow-x:hidden;position:relative;}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");}
+  :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;}
 
   .frame{position:fixed;inset:14px;pointer-events:none;z-index:40;border:1px solid rgba(196,163,90,.55);}
   .frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(196,163,90,.3);}
@@ -33,30 +44,17 @@
   .petal{position:fixed;top:-40px;z-index:1;pointer-events:none;opacity:0;color:var(--blue);animation:fall linear infinite;}
   @keyframes fall{0%{transform:translateY(-40px) rotate(0);opacity:0;}10%{opacity:.5;}90%{opacity:.4;}100%{transform:translateY(105vh) rotate(320deg);opacity:0;}}
 
-  /* ===== Pixel Cinderella companion ===== */
-  .cindy-wrap{position:fixed;right:30px;bottom:28px;z-index:35;}
-  .cindy-companion{display:block;width:64px;height:auto;cursor:pointer;
-    animation:floaty 3.8s ease-in-out infinite;filter:drop-shadow(0 7px 7px rgba(39,56,74,.28));}
-  .cindy-companion{transform-origin:bottom center;}
-  .cindy-companion.curtsy{animation:curtsy .95s ease-in-out;}
-  .cindy-bubble{position:absolute;bottom:100%;right:-2px;margin-bottom:12px;white-space:nowrap;
-    background:var(--cream-light);border:1px solid var(--gold);color:var(--blue-deep);
-    font-family:'Cormorant Garamond',serif;font-size:.92rem;letter-spacing:.05em;padding:6px 13px;
-    opacity:0;transform:translateY(6px) scale(.9);transition:.28s cubic-bezier(.2,.8,.3,1);pointer-events:none;box-shadow:0 5px 14px var(--shadow);}
-  .cindy-bubble::after{content:"";position:absolute;top:100%;right:18px;border:6px solid transparent;border-top-color:var(--cream-light);filter:drop-shadow(0 1px 0 var(--gold));}
-  .cindy-bubble.show{opacity:1;transform:translateY(0) scale(1);}
-
+  /* ===== pixel heroine ===== */
   .cindy-hero{display:block;width:118px;height:auto;image-rendering:pixelated;cursor:pointer;transform-origin:bottom center;
     animation:floaty 3.4s ease-in-out infinite;filter:drop-shadow(0 8px 8px rgba(39,56,74,.22));}
   .cindy-hero.curtsy{animation:curtsy 1s ease-in-out;}
-  .hero-greet-wrap{position:relative;width:max-content;margin:18px auto 0;}
+  .hero-greet-wrap{position:relative;width:max-content;margin:18px auto 0;perspective:700px;}
   .hero-greet{position:absolute;bottom:100%;left:50%;margin-bottom:14px;width:min(300px,82vw);text-align:center;
     transform:translateX(-50%) translateY(12px) scale(.92);background:var(--cream-light);border:1px solid var(--gold);
     color:var(--blue-deep);font-family:'Cormorant Garamond',serif;font-size:1.14rem;line-height:1.4;letter-spacing:.03em;padding:11px 20px;
     box-shadow:0 8px 22px var(--shadow);opacity:0;transition:.55s cubic-bezier(.2,.8,.3,1);pointer-events:none;}
   .hero-greet::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--cream-light);filter:drop-shadow(0 1px 0 var(--gold));}
   .hero-greet.show{opacity:1;transform:translateX(-50%) translateY(0) scale(1);}
-
   @keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--lean,-1deg));}50%{transform:translateY(-8px) rotate(var(--lean,1deg));}}
   @keyframes curtsy{
     0%{transform:translateY(0) rotate(var(--lean,0deg)) scaleY(1);}
@@ -65,18 +63,17 @@
     72%{transform:translateY(6px) rotate(calc(var(--lean,0deg) + 4deg)) scaleY(.92);}
     100%{transform:translateY(0) rotate(var(--lean,0deg)) scaleY(1);}
   }
-  @media(max-width:600px){.cindy-wrap{right:12px;bottom:14px;}.cindy-companion{width:46px;}.cindy-hero{width:96px;}.cindy-bubble{font-size:.8rem;}.hero-greet{font-size:1rem;}}
+  @media(max-width:600px){.cindy-hero{width:96px;}.hero-greet{font-size:1rem;}}
 
   header{position:relative;z-index:30;padding:30px 24px 14px;text-align:center;}
-  .monogram{font-family:'Pinyon Script',cursive;font-size:2.7rem;color:var(--gold-deep);line-height:.9;cursor:pointer;display:inline-block;}
-  .crest{display:block;margin:2px auto 10px;width:34px;color:var(--gold);}
+  .monogram{font-family:'Pinyon Script',cursive;font-size:2.7rem;color:var(--gold-deep);line-height:.9;cursor:pointer;display:inline-block;background:none;border:none;}
+  .crest{display:block;margin:2px auto 10px;width:34px;color:var(--gold);cursor:pointer;}
   nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;align-items:center;margin-top:6px;}
   nav li{display:flex;align-items:center;}
-  nav button{font-family:'Cormorant Garamond',serif;background:none;border:none;cursor:pointer;color:var(--blue-deep);
-    font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;transition:color .3s;font-weight:500;}
-  nav button:hover,nav button.active{color:var(--gold-deep);}
-  nav button.active{position:relative;}
-  nav button.active::after{content:"";position:absolute;left:16px;right:16px;bottom:2px;height:1px;background:var(--gold);}
+  nav a{font-family:'Cormorant Garamond',serif;text-decoration:none;cursor:pointer;color:var(--blue-deep);
+    font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;transition:color .3s;font-weight:500;position:relative;}
+  nav a:hover,nav a.active{color:var(--gold-deep);}
+  nav a.active::after{content:"";position:absolute;left:16px;right:16px;bottom:2px;height:1px;background:var(--gold);}
   .divider-dot{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);opacity:.7;margin:0 2px;}
   .menu-toggle{display:none;}
   @media(max-width:760px){
@@ -84,8 +81,8 @@
     .menu-toggle{display:inline-flex;align-items:center;gap:8px;margin:10px auto 0;font-family:'Cormorant Garamond',serif;
       letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid var(--gold);color:var(--blue-deep);padding:8px 20px;cursor:pointer;font-size:.85rem;}
     nav ul{flex-direction:column;max-height:0;overflow:hidden;transition:max-height .45s ease;gap:0;}
-    nav ul.open{max-height:480px;margin-top:14px;}
-    nav button{padding:11px 0;font-size:1.1rem;}
+    nav ul.open{max-height:560px;margin-top:14px;}
+    nav a{padding:11px 0;font-size:1.1rem;}
   }
 
   main{position:relative;z-index:10;max-width:1040px;margin:0 auto;padding:18px 28px 110px;}
@@ -120,9 +117,10 @@
   .card:hover::after{transform:translateX(130%);}
   .card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(196,163,90,.32);pointer-events:none;}
   .card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(39,56,74,.16);}
-  .card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--blue-ink);font-weight:600;}
-  .card .role{font-style:italic;color:var(--gold-deep);margin-bottom:10px;font-size:1rem;}
+  .card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--blue-ink);font-weight:600;line-height:1.2;}
+  .card .role{font-style:italic;color:var(--gold-deep);margin:4px 0 10px;font-size:1rem;}
   .card p{font-size:1.04rem;color:var(--blue-deep);}
+  .card.featured{grid-column:1/-1;}
   .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;}
   .tag{font-family:'Cormorant Garamond',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--blue);color:var(--blue-deep);padding:4px 11px;border-radius:2px;}
   .metric{display:inline-block;margin-top:14px;font-family:'Cormorant Garamond',serif;color:var(--gold-deep);font-size:1.05rem;letter-spacing:.04em;border-top:1px solid rgba(196,163,90,.5);padding-top:10px;}
@@ -143,29 +141,20 @@
   .pill:hover::before{transform:translateX(130%);}
   #conservatory.active .pill{animation:pillIn .55s cubic-bezier(.2,.8,.3,1) both;}
   @keyframes pillIn{from{opacity:0;transform:translateY(16px) scale(.95);}to{opacity:1;transform:none;}}
-  #conservatory.active .pill:nth-child(1){animation-delay:.04s}#conservatory.active .pill:nth-child(2){animation-delay:.08s}
-  #conservatory.active .pill:nth-child(3){animation-delay:.12s}#conservatory.active .pill:nth-child(4){animation-delay:.16s}
-  #conservatory.active .pill:nth-child(5){animation-delay:.20s}#conservatory.active .pill:nth-child(6){animation-delay:.24s}
-  #conservatory.active .pill:nth-child(7){animation-delay:.28s}#conservatory.active .pill:nth-child(8){animation-delay:.32s}
-  #conservatory.active .pill:nth-child(9){animation-delay:.36s}#conservatory.active .pill:nth-child(10){animation-delay:.40s}
-  #conservatory.active .pill:nth-child(11){animation-delay:.44s}#conservatory.active .pill:nth-child(12){animation-delay:.48s}
-  #conservatory.active .pill:nth-child(13){animation-delay:.52s}#conservatory.active .pill:nth-child(14){animation-delay:.56s}
-  #conservatory.active .pill:nth-child(15){animation-delay:.60s}
   .honours{display:grid;gap:14px;max-width:760px;margin:0 auto;}
-  .honour{display:flex;gap:14px;align-items:flex-start;background:var(--cream-light);border:1px solid rgba(196,163,90,.4);padding:16px 20px;}
+  .honour{display:flex;gap:14px;align-items:flex-start;background:var(--cream-light);border:1px solid rgba(196,163,90,.4);padding:16px 20px;text-align:left;}
   .honour .bee{flex:0 0 auto;width:22px;color:var(--gold);margin-top:4px;}
   .honour b{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--blue-ink);font-weight:600;}
-  .honour p{font-size:1rem;color:var(--blue-deep);}
+  .honour p{font-size:1rem;color:var(--blue-deep);margin:0;}
+  .honour .when{display:block;font-family:'Cormorant Garamond',serif;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--gold-deep);}
 
   .letter{max-width:600px;margin:0 auto;background:var(--cream-light);border:1px solid rgba(196,163,90,.5);padding:40px 36px;text-align:center;box-shadow:0 10px 30px rgba(39,56,74,.1);position:relative;}
   .letter::before{content:"";position:absolute;inset:9px;border:1px solid rgba(196,163,90,.3);pointer-events:none;}
   .letter p{font-size:1.1rem;margin-bottom:8px;color:var(--blue-deep);}
-  .contact-links{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
-  .contact-links a{font-family:'Cormorant Garamond',serif;letter-spacing:.06em;font-size:1.12rem;color:var(--blue-deep);text-decoration:none;border-bottom:1px solid transparent;transition:.3s;display:inline-block;word-break:break-word;}
-  .contact-links a:hover{color:var(--gold-deep);border-bottom-color:var(--gold);}
   .seal{font-family:'Pinyon Script',cursive;font-size:2rem;color:var(--gold-deep);margin-top:26px;}
+  @media(max-width:600px){.letter{padding:32px 22px;}}
 
-  .hero-hint{margin-top:9px;text-align:center;font-family:'Cormorant Garamond',serif;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;color:var(--gold-deep);cursor:pointer;animation:hintpulse 2.6s ease-in-out infinite;}
+  .hero-hint{margin-top:9px;text-align:center;font-family:'Cormorant Garamond',serif;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;color:var(--gold-deep);cursor:pointer;animation:hintpulse 2.6s ease-in-out infinite;background:none;border:none;display:block;margin-left:auto;margin-right:auto;}
   @keyframes hintpulse{0%,100%{opacity:.45;}50%{opacity:.95;}}
   .essays{display:grid;gap:22px;max-width:760px;margin:0 auto;}
   .essay{background:var(--cream-light);border:1px solid rgba(196,163,90,.45);border-left:3px solid var(--gold);padding:24px 28px;text-align:left;}
@@ -177,12 +166,12 @@
   footer{position:relative;z-index:10;text-align:center;padding:34px 26px 120px;max-width:760px;margin:0 auto;font-family:'Cormorant Garamond',serif;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--blue);line-height:1.9;}
   @media(max-width:600px){footer{padding-bottom:92px;}}
 
-  /* ===== curtain loader ===== */
+  /* ===== curtain ===== */
   #curtain{position:fixed;inset:0;z-index:300;cursor:pointer;}
   #curtain.gone{display:none;}
   .curtain-panel{position:absolute;top:0;bottom:0;width:51%;
     background:repeating-linear-gradient(90deg,#3f5a74 0,#4a6580 16px,#34506a 32px,#3f5a74 48px),linear-gradient(#46617c,#2c4458);
-    box-shadow:inset 0 0 90px rgba(0,0,0,.45);transition:transform 1.55s cubic-bezier(.76,0,.24,1);}
+    box-shadow:inset 0 0 90px rgba(0,0,0,.45);transition:transform 1.4s cubic-bezier(.76,0,.24,1);}
   .curtain-panel.left{left:0;border-right:3px solid var(--gold);}
   .curtain-panel.right{right:0;border-left:3px solid var(--gold);}
   #curtain.open .curtain-panel.left{transform:translateX(-102%);}
@@ -192,7 +181,6 @@
   .curtain-mono{font-family:'Pinyon Script',cursive;font-size:5rem;color:var(--gold-bright);line-height:.8;}
   .curtain-bee{width:34px;color:var(--gold-bright);margin:8px 0 16px;}
   .curtain-sub{font-family:'Cormorant Garamond',serif;letter-spacing:.34em;text-transform:uppercase;color:#f3ecdb;font-size:.92rem;}
-  .curtain-hint{margin-top:28px;font-family:'Cormorant Garamond',serif;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--gold-bright);animation:hintpulse 2.2s ease-in-out infinite;}
 
   /* ===== controls ===== */
   .controls{position:fixed;top:20px;right:56px;z-index:120;display:flex;gap:10px;}
@@ -245,7 +233,7 @@
   .linktree a:hover{background:var(--blue);color:var(--cream-light);transform:translateY(-3px);box-shadow:0 8px 18px var(--shadow);}
   .linktree a svg{width:18px;height:18px;flex:0 0 auto;}
 
-  /* ===== cursor sparkle trail ===== */
+  /* ===== sparkle trail + easter egg ===== */
   .spark{position:fixed;z-index:140;pointer-events:none;transform:translate(-50%,-50%);animation:sparkfade .75s ease-out forwards;}
   .spark svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 2px rgba(216,189,119,.6));}
   @keyframes sparkfade{
@@ -253,7 +241,6 @@
     20%{opacity:.95;}
     100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.2) rotate(var(--rot));}
   }
-  /* ===== easter egg petal shower + twirl ===== */
   .shower-petal{position:fixed;top:-30px;z-index:140;pointer-events:none;animation-name:showerfall;animation-timing-function:ease-in;animation-fill-mode:forwards;}
   .shower-petal svg{width:100%;height:100%;}
   @keyframes showerfall{
@@ -261,22 +248,25 @@
     10%{opacity:.9;}
     100%{transform:translateY(108vh) translateX(var(--sway)) rotate(540deg);opacity:.2;}
   }
-  .hero-greet-wrap{perspective:700px;}
-  .crest{cursor:pointer;}
   .cindy-hero.spin{transform-origin:center;animation:twirl 1.25s ease-in-out;}
   @keyframes twirl{0%{transform:rotateY(0) scale(1);}50%{transform:rotateY(180deg) scale(1.15);}100%{transform:rotateY(360deg) scale(1);}}
+
+  /* ===== reduced motion ===== */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+    .petal,.spark,.shower-petal{display:none !important;}
+  }
 </style>
 </head>
 <body>
 
-<div id="curtain">
+<div id="curtain" role="button" tabindex="0" aria-label="Enter the portfolio">
   <div class="curtain-panel left"></div>
   <div class="curtain-panel right"></div>
   <div class="curtain-center">
     <div class="curtain-mono">JA</div>
     <svg class="curtain-bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6.5" ry="9"/><path d="M20 16 Q9 8 4 16 Q12 19 20 17 Z" opacity=".6"/><path d="M20 16 Q31 8 36 16 Q28 19 20 17 Z" opacity=".6"/></svg>
     <div class="curtain-sub">Welcome to the Estate</div>
-    <div class="curtain-hint">&#10022; tap to enter &#10022;</div>
   </div>
 </div>
 
@@ -285,8 +275,7 @@
   <button class="ctrl" id="musicBtn" title="String quartet" aria-label="String quartet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="18" cy="16" r="3" fill="currentColor"/></svg></button>
 </div>
 
-
-<!-- pixel Cinderella sprite definition -->
+<!-- pixel heroine sprite definition -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="cindy" viewBox="0 0 16 23">
   <rect x="5" y="0" width="1" height="1" fill="#d8bd77"/><rect x="8" y="0" width="1" height="1" fill="#d8bd77"/><rect x="10" y="0" width="1" height="1" fill="#d8bd77"/>
   <rect x="5" y="1" width="6" height="1" fill="#d8bd77"/>
@@ -325,24 +314,26 @@
 <div class="corner br"><svg viewBox="0 0 62 62" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 60 V20 Q2 2 20 2 H60"/><path d="M10 60 Q10 28 14 18 Q22 8 40 10"/><circle cx="16" cy="16" r="3" fill="currentColor" stroke="none"/></svg></div>
 
 <header>
-  <div class="monogram" onclick="enter('foyer')">JA</div>
-  <svg class="crest" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6.5" ry="9"/><path d="M20 16 Q9 8 4 16 Q12 19 20 17 Z" opacity=".6"/><path d="M20 16 Q31 8 36 16 Q28 19 20 17 Z" opacity=".6"/><rect x="17.5" y="17" width="5" height="14" rx="2.5" fill="#f7f0df"/><rect x="17.5" y="20" width="5" height="2.4" fill="#a98637"/><rect x="17.5" y="24.5" width="5" height="2.4" fill="#a98637"/><circle cx="20" cy="13.5" r="2.2"/></svg>
-  <button class="menu-toggle" onclick="toggleMenu()">✦ The Estate ✦</button>
-  <nav>
+  <a class="monogram" href="#foyer" aria-label="Home">JA</a>
+  <svg class="crest" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><ellipse cx="20" cy="24" rx="6.5" ry="9"/><path d="M20 16 Q9 8 4 16 Q12 19 20 17 Z" opacity=".6"/><path d="M20 16 Q31 8 36 16 Q28 19 20 17 Z" opacity=".6"/><rect x="17.5" y="17" width="5" height="14" rx="2.5" fill="#f7f0df"/><rect x="17.5" y="20" width="5" height="2.4" fill="#a98637"/><rect x="17.5" y="24.5" width="5" height="2.4" fill="#a98637"/><circle cx="20" cy="13.5" r="2.2"/></svg>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-controls="menu">✦ The Estate ✦</button>
+  <nav aria-label="Rooms">
     <ul id="menu">
-      <li><button data-room="foyer" class="active" onclick="enter('foyer')">The Foyer</button></li>
+      <li><a href="#foyer" data-room="foyer" class="active">The Foyer</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="study" onclick="enter('study')">The Study</button></li>
+      <li><a href="#study" data-room="study">The Study</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="gallery" onclick="enter('gallery')">The Gallery</button></li>
+      <li><a href="#library" data-room="library">The Library</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="library" onclick="enter('library')">The Library</button></li>
+      <li><a href="#gallery" data-room="gallery">The Gallery</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="conservatory" onclick="enter('conservatory')">The Conservatory</button></li>
+      <li><a href="#conservatory" data-room="conservatory">The Conservatory</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="calendar" onclick="enter('calendar')">The Calendar</button></li>
+      <li><a href="#parlour" data-room="parlour">The Parlour</a></li>
       <li class="divider-dot"></li>
-      <li><button data-room="correspondence" onclick="enter('correspondence')">Correspondence</button></li>
+      <li><a href="#calendar" data-room="calendar">The Calendar</a></li>
+      <li class="divider-dot"></li>
+      <li><a href="#correspondence" data-room="correspondence">Correspondence</a></li>
     </ul>
   </nav>
 </header>
@@ -354,22 +345,23 @@
     <p class="eyebrow">Welcome to the Estate of</p>
     <span class="script">Jenica</span>
     <h1 class="grand">JENICA A.</h1>
-    <p class="titles">Artificial Intelligence &middot; Machine Learning &middot; Graph Learning</p>
+    <p class="titles">Reinforcement Learning &middot; Graph Learning &middot; Explainable AI</p>
     <div class="hero-greet-wrap">
-      <div class="hero-greet" id="heroGreet">Welcome to my estate, dearest reader, do come in! &#10022;</div>
-      <svg class="cindy-hero" viewBox="0 0 16 23" role="button" tabindex="0" aria-label="Enter the parlour" onclick="enter('parlour')" onkeypress="if(event.key==='Enter')enter('parlour')"><use href="#cindy"/></svg>
+      <div class="hero-greet" id="heroGreet">Welcome to my estate, dear reader, do come in! &#10022;</div>
+      <svg class="cindy-hero" viewBox="0 0 16 23" role="button" tabindex="0" aria-label="Enter the parlour" onclick="go('parlour')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();go('parlour');}"><use href="#cindy"/></svg>
     </div>
+    <button class="hero-hint" onclick="go('parlour')">&#10022; curtsy to the lady for the parlour &#10022;</button>
     <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><path d="M100 22 Q84 18 72 26 M100 22 Q116 18 128 26"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><circle cx="64" cy="14" r="2" fill="currentColor" stroke="none"/><circle cx="136" cy="14" r="2" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/><circle cx="6" cy="18" r="1.5" fill="currentColor" stroke="none"/><circle cx="194" cy="18" r="1.5" fill="currentColor" stroke="none"/></svg>
-    <p class="whistle">&ldquo;Dearest gentle reader, this author is delighted to present a young lady of rare ambition. She builds intelligent systems, presides over her own society, and keeps her gaze fixed firmly upon the work ahead. Do read on.&rdquo;</p>
+    <p class="whistle">&ldquo;Dear reader, this author is delighted to present a young lady of rare ambition. She studies how machines learn from consequence, builds systems that real people use, and presides over her own society besides. Do read on.&rdquo;</p>
     <div class="enter-row">
-      <a class="btn" onclick="enter('gallery')">Tour the Gallery</a>
-      <a class="btn ghost" onclick="enter('library')">Enter the Library</a>
-      <a class="btn ghost seal-btn" href="data:application/pdf;base64,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/h1TWw4lVDRXXXGBivpERjtCB4IJSzHniXYOAaxyJxXXFYG3B9RccMMZ6fDH8OxFTTJ7lrw5HF3Ox2fj6qjwWGDq7eWk5539dH4xuTWS9p4WvS0K3H7Hj0PLnNbMMDpkSO8fss0KpD6yFsDgx1arttL77gDAHipXigjLYIjVIR7pPj+26b25WRW+Q5mi3ejN1evdsIcbPlXyb0xM7Xc28uwNfVSpbFSFJ4IVPoJU60wqtkL4kytT1iFECSKi/ie8n15ItWKCYofGWmPI2fdtRfNWccP1GgZc3bLNXYbCycnn/wJuUO/PDQplbmRzdHJlYW0NCmVuZG9iag0KOCAwIG9iag0KPDwvRjEgOSAwIFIgL0YyIDEwIDAgUiAvRjMgMTEgMCBSID4+DQplbmRvYmoNCjkgMCBvYmoNCjw8L0Jhc2VGb250L0hlbHZldGljYS9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMS9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjEwIDAgb2JqDQo8PC9CYXNlRm9udC9IZWx2ZXRpY2EtQm9sZC9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMi9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjExIDAgb2JqDQo8PC9CYXNlRm9udC9IZWx2ZXRpY2EtT2JsaXF1ZS9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMy9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjEyIDAgb2JqDQo8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDg+PnN0cmVhbQ0KeJwDAAAAAAENCmVuZHN0cmVhbQ0KZW5kb2JqDQoxMyAwIG9iag0KWyA3IDAgUiBdDQplbmRvYmoNCnhyZWYNCjAgMTQNCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAwMDAxNyAwMDAwMCBuDQowMDAwMDAwMDY2IDAwMDAwIG4NCjAwMDAwMDAxMjIgMDAwMDAgbg0KMDAwMDAwMDIwOSAwMDAwMCBuDQowMDAwMDAwNDE1IDAwMDAwIG4NCjAwMDAwMDA1ODEgMDAwMDAgbg0KMDAwMDAwMDc0MiAwMDAwMCBuDQowMDAwMDAzODUyIDAwMDAwIG4NCjAwMDAwMDM5MDcgMDAwMDAgbg0KMDAwMDAwNDAwNiAwMDAwMCBuDQowMDAwMDA0MTExIDAwMDAwIG4NCjAwMDAwMDQyMTkgMDAwMDAgbg0KMDAwMDAwNDI5OCAwMDAwMCBuDQp0cmFpbGVyDQo8PA0KL1Jvb3QgMSAwIFINCi9JbmZvIDMgMCBSDQovU2l6ZSAxNC9JRFs8NzE1NUNDM0U5QUM5RjIxODA5RTAxQTU5MDMxRjkzREQ+PDcxNTVDQzNFOUFDOUYyMTgwOUUwMUE1OTAzMUY5M0REPl0+Pg0Kc3RhcnR4cmVmDQo0MzI3DQolJUVPRg0K" download="JenicaA_Resume_2026.pdf"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7l1.3 2.8 3 .3-2.2 2 .6 3L12 16.4 9.3 18l.6-3-2.2-2 3-.3z" fill="#f7f0df"/></svg>Request my Card</a>
+      <a class="btn" href="#library">Enter the Library</a>
+      <a class="btn ghost" href="#gallery">Tour the Gallery</a>
+      <a class="btn ghost seal-btn" href="JenicaA_Resume.pdf" download><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7l1.3 2.8 3 .3-2.2 2 .6 3L12 16.4 9.3 18l.6-3-2.2-2 3-.3z" fill="#f7f0df"/></svg>Request my Card</a>
     </div>
     <div class="stat-row">
-      <div class="stat"><b>B.Tech</b><span>AI &amp; Machine Learning</span></div>
-      <div class="stat"><b>5+</b><span>Projects Built &amp; Shipped</span></div>
-      <div class="stat"><b>Live</b><span>Deployed in Production</span></div>
+      <div class="stat"><b>8.72</b><span>CGPA / 10</span></div>
+      <div class="stat"><b>2</b><span>Apps Live in Production</span></div>
+      <div class="stat"><b>3</b><span>IEEE Society Roles</span></div>
       <div class="stat"><b>2028</b><span>Graduating Cohort</span></div>
     </div>
   </section>
@@ -380,75 +372,84 @@
     <h1>The Study</h1>
     <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
     <div class="study-body">
-      <p>Dearest reader, allow this author a proper introduction. Miss Jenica is a student of <span class="hl">Artificial Intelligence &amp; Machine Learning</span> at Saveetha School of Engineering (SIMATS University) in Chennai, to be presented to the world in May of 2028. She is not one for idle promises; she builds her systems from end to end and sends them out to live in the world, rather than leaving them to gather dust in a notebook.</p>
-      <p>Beyond her studies, the young lady keeps remarkable company in society. She serves as <span class="hl">Chair of the IEEE Women in Engineering</span> chapter and as <span class="hl">Webmaster of the IEEE Computational Intelligence Society</span> chapter, hosting technical gatherings and tending the digital affairs of both. A busy diary indeed.</p>
-      <p>Her talents, this author is told, lie in predictive modelling, feature engineering, and the careful reading of data. Across the Kaggle competitions she has lifted her accuracy by some fifteen per cent through patient preparation, and she now sets her sights on deeper machine learning, and on building intelligence that ordinary people may genuinely use. We shall be watching most keenly.</p>
+      <p>Dear reader, allow this author a proper introduction. Miss Jenica is a third-year student of <span class="hl">Artificial Intelligence &amp; Machine Learning</span> at Saveetha School of Engineering (SIMATS) in Chennai, to be presented to the world in May of 2028. She builds her systems from end to end and sends them out to live in the world, rather than leaving them to gather dust in a notebook.</p>
+      <p>Her scholarly affections lie with <span class="hl">credit assignment in reinforcement learning</span>, <span class="hl">graph neural networks</span>, and <span class="hl">fairness in model explanations</span>. Her practical talents run to predictive modelling and patient feature engineering. She means, in time, to make research her vocation.</p>
+      <p>In society she keeps a remarkably full diary: <span class="hl">Chair of IEEE Women in Engineering</span>, <span class="hl">Membership Coordinator</span> of her IEEE Student Branch, and <span class="hl">Webmaster of the IEEE Computational Intelligence Society</span> chapter.</p>
       <div class="ledger">
         <div class="item"><span>Degree</span><b>B.Tech, AI &amp; Machine Learning</b></div>
         <div class="item"><span>House</span><b>Saveetha School of Engineering, SIMATS</b></div>
+        <div class="item"><span>Standing</span><b>CGPA 8.72 / 10</b></div>
         <div class="item"><span>Graduation</span><b>Expected May 2028</b></div>
-        <div class="item"><span>Focus</span><b>Applied AI &amp; Machine Learning</b></div>
+        <div class="item"><span>Research</span><b>RL Credit Assignment &middot; GNNs &middot; XAI</b></div>
       </div>
+    </div>
+
+    <p class="eyebrow" style="margin-top:44px">Engagements</p>
+    <div class="honours">
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><span class="when">Machine Learning Role</span><b>Sales Forecasting with LSTMs</b><p>Built an LSTM model forecasting sales across 50 product categories, reaching 12.4% MAPE against a 16.8% baseline. Follow-up analysis found 4% higher sales for women&rsquo;s products, which informed inventory allocation and seasonal marketing.</p></div></div>
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><span class="when">Incoming</span><b>Data Engineering Intern &middot; HCL</b><p>Upcoming internship in data engineering.</p></div></div>
+    </div>
+  </section>
+
+  <!-- THE LIBRARY -->
+  <section class="room" id="library">
+    <p class="eyebrow">Room the Second</p>
+    <h1>The Library</h1>
+    <p class="lead">The young lady&rsquo;s research, dear reader, her most learned pursuits.</p>
+    <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
+    <div class="grid two">
+      <article class="card featured">
+        <h3>Classical Graph-Algorithm Execution as a Controlled Testbed for Credit Assignment in Reinforcement Learning</h3>
+        <p class="role">Solo paper &middot; Preprint, arXiv submission in progress (cs.LG)</p>
+        <p>Credit assignment, deciding which earlier action deserves the reward that arrives later, is among the oldest puzzles in reinforcement learning. This paper uses the step-by-step execution of classical graph algorithms such as BFS, DFS and Dijkstra as a controlled setting in which to study it, pairing graph neural networks with reinforcement learning.</p>
+        <div class="tags"><span class="tag">Reinforcement Learning</span><span class="tag">Credit Assignment</span><span class="tag">GNN</span><span class="tag">Algorithmic Reasoning</span></div>
+      </article>
+      <article class="card featured">
+        <h3>Bias-Driven Efficiency in AI using GNNs</h3>
+        <p class="role">Four posters &middot; Tech Star Summit 2026</p>
+        <p>A single notion pursued down four separate avenues, pairing graph neural networks with PPO, DQN, GCN and Node2Vec to ask how bias might be turned toward efficiency. All four were presented together at the Star Summit.</p>
+        <div class="tags"><span class="tag">PPO</span><span class="tag">DQN</span><span class="tag">GCN</span><span class="tag">Node2Vec</span></div>
+        <span class="metric">4 posters &middot; presented in one sitting</span>
+      </article>
     </div>
   </section>
 
   <!-- THE GALLERY -->
   <section class="room" id="gallery">
-    <p class="eyebrow">Room the Second</p>
+    <p class="eyebrow">Room the Third</p>
     <h1>The Gallery</h1>
     <p class="lead">A collection of the young lady&rsquo;s finest works, dear reader, each framed and hung with care.</p>
     <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
     <div class="grid two">
-      <article class="card">
+      <article class="card" data-project="adrian">
         <h3>Adrian AI</h3>
         <p class="role">RAG-Powered Study Companion &middot; Deployed</p>
         <p>A clever companion, dear reader, that reads a lady&rsquo;s documents and answers only from what they truly contain, built upon her own pipeline for chunking, tokenisation and retrieval, with no borrowed framework to lean upon. Should one model falter, a chain of five attends in its place, so the conversation never once stumbles.</p>
         <div class="tags"><span class="tag">RAG</span><span class="tag">Llama 3.2</span><span class="tag">OpenRouter</span><span class="tag">Streamlit Cloud</span></div>
         <span class="metric">Live in production &middot; zero infra cost</span>
       </article>
-      <article class="card">
+      <article class="card" data-project="orbit">
         <h3>Orbit</h3>
-        <p class="role">Cross-College Collaboration Platform</p>
-        <p>A drawing room for student builders across many colleges, raised entirely by her own hand. Within one finds secure entry by passcode, a lively feed of reactions, a clever matchmaker for collaborators, and a dashboard for keeping good order, all without a single borrowed framework. Quite the accomplishment for one application.</p>
+        <p class="role">Cross-College Collaboration Platform &middot; Deployed</p>
+        <p>A drawing room for student builders across many colleges, raised entirely by her own hand. Within one finds secure entry by passcode, a lively feed of reactions, an AI matchmaker for collaborators, and a dashboard for keeping good order. Quite the accomplishment for one application.</p>
         <div class="tags"><span class="tag">JavaScript</span><span class="tag">Anthropic API</span><span class="tag">PWA</span><span class="tag">Design System</span></div>
         <span class="metric">Auth &middot; Feed &middot; AI &middot; Admin, in one file</span>
       </article>
-      <article class="card">
+      <article class="card" data-project="f1">
         <h3>Predicting F1 Pit Stops</h3>
         <p class="role">Kaggle Competition &middot; Ensemble</p>
         <p>A spirited wager upon the racing season, dear reader. The young lady forecasts the pit stops by reading the smallest of signs: the wear of a tyre, the drift of lap times, the progress of the race. Three fine models were trained and blended together with the greatest care.</p>
         <div class="tags"><span class="tag">LightGBM</span><span class="tag">XGBoost</span><span class="tag">CatBoost</span><span class="tag">Feature Eng.</span></div>
-        <span class="metric">AUC 0.948 &middot; Rank 971 / 1758 (top 56%)</span>
+        <span class="metric">AUC 0.948 &middot; 5-fold CV ensemble</span>
       </article>
-      <article class="card">
+      <article class="card" data-project="irrigation">
         <h3>Predicting Irrigation Need</h3>
         <p class="role">Kaggle Competition &middot; ML Pipeline</p>
-        <p>A thorough study across some ten thousand samples, by which she raised her accuracy by a handsome fifteen per cent. More than twenty new features were fashioned by hand, and the labour of experiment cut by near a third. Industry, dear reader, of the most admirable sort.</p>
+        <p>A thorough study across some ten thousand samples, by which she raised her accuracy fifteen per cent above her first baseline. More than twenty new features were fashioned by hand, and the labour of experiment cut by near a third. Industry, dear reader, of the most admirable sort.</p>
         <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">EDA</span></div>
-        <span class="metric">+15% accuracy &middot; 20+ features</span>
-      </article>
-    </div>
-  </section>
-
-  <!-- THE LIBRARY -->
-  <section class="room" id="library">
-    <p class="eyebrow">Room the Third</p>
-    <h1>The Library</h1>
-    <p class="lead">The young lady&rsquo;s deeper and more learned pursuits, dear reader.</p>
-    <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
-    <div class="grid two">
-      <article class="card">
-        <h3>Neural Algorithmic Reasoning on Graphs</h3>
-        <p class="role">Graph Neural Networks + Reinforcement Learning</p>
-        <p>Here she teaches a neural network to <em>perform</em> the classical algorithms, the very BFS, DFS and Dijkstra of the textbooks, by wedding graph neural networks to reinforcement learning. An ongoing endeavour, and a most natural continuation of her devotion to graphs.</p>
-        <div class="tags"><span class="tag">GNN</span><span class="tag">Reinforcement Learning</span><span class="tag">Algorithms</span></div>
-      </article>
-      <article class="card">
-        <h3>Bias-Driven Efficiency in AI using GNNs</h3>
-        <p class="role">Four posters &middot; Tech Star Summit 2026</p>
-        <p>A single notion pursued down four separate avenues, pairing graph neural networks with PPO, DQN, GCN and Node2Vec to ask how bias might be turned toward efficiency. All four were presented together at the Star Summit, to no small acclaim.</p>
-        <div class="tags"><span class="tag">PPO</span><span class="tag">DQN</span><span class="tag">GCN</span><span class="tag">Node2Vec</span></div>
-        <span class="metric">4 posters &middot; presented in one sitting</span>
+        <span class="metric">+15% accuracy over baseline &middot; 20+ features</span>
       </article>
     </div>
   </section>
@@ -464,9 +465,23 @@
     <div class="pill-wrap">
       <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">JavaScript / HTML / CSS</span>
       <span class="pill">Scikit-learn</span><span class="pill">XGBoost / LightGBM / CatBoost</span><span class="pill">Feature Engineering</span>
-      <span class="pill">RAG &amp; LLM Integration</span><span class="pill">Reinforcement Learning (PPO)</span><span class="pill">NLTK</span>
-      <span class="pill">Pandas / NumPy</span><span class="pill">Matplotlib</span><span class="pill">Streamlit</span>
-      <span class="pill">REST APIs</span><span class="pill">OpenRouter &amp; Anthropic APIs</span><span class="pill">Git / GitHub</span>
+      <span class="pill">RAG &amp; LLM Integration</span><span class="pill">Reinforcement Learning (PPO, DQN)</span><span class="pill">Graph Neural Networks</span>
+      <span class="pill">LSTM Forecasting</span><span class="pill">Pandas / NumPy</span><span class="pill">Matplotlib</span>
+      <span class="pill">Streamlit</span><span class="pill">OpenRouter &amp; Anthropic APIs</span><span class="pill">Git / GitHub</span>
+    </div>
+
+    <p class="eyebrow" style="margin-top:26px">Leadership &amp; Awards</p>
+    <div class="honours">
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><b>Chair &middot; IEEE Women in Engineering Student Chapter</b><p>Leads technical meetings, expert seminars and community events, including InnovateHER&rsquo;26 for IEEE Day</p></div></div>
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><b>Membership Coordinator &middot; IEEE Student Branch, SIMATS</b><p>Appointed October 2026 &middot; IEEE Star Recruiter (Bronze tier)</p></div></div>
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><b>Webmaster &middot; IEEE Computational Intelligence Society Student Chapter</b><p>Manages the chapter website and digital outreach for technical events</p></div></div>
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><b>International Achievers Award &middot; Silamboli Foundations (SIMATS)</b><p>Recognised for consistent performance in academics, leadership and student initiatives</p></div></div>
+      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
+        <div><b>Member &middot; IEEE, IEEE WIE &amp; IEEE Computer Society</b><p>Active member across three IEEE communities</p></div></div>
     </div>
 
     <p class="eyebrow" style="margin-top:26px">Diplomas &amp; Distinctions</p>
@@ -479,22 +494,8 @@
         <div><b>Google Project Management &middot; Certificate</b><p>Planning, execution &amp; delivery</p></div></div>
       <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
         <div><b>Python Certification &middot; Codecademy</b><p>Programming fundamentals &amp; applied Python</p></div></div>
-    </div>
-
-    <p class="eyebrow" style="margin-top:26px">Virtual Internships &middot; Forage</p>
-    <div class="honours">
       <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
-        <div><b>JPMorgan Chase &middot; Amazon &middot; British Airways</b><p>Forage job-simulation programmes across finance, technology and operations</p></div></div>
-    </div>
-
-    <p class="eyebrow" style="margin-top:26px">Leadership &amp; Awards</p>
-    <div class="honours">
-      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
-        <div><b>Chair &middot; IEEE Women in Engineering Student Chapter</b><p>Led technical meetings, expert seminars and community events that grew chapter engagement and visibility</p></div></div>
-      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
-        <div><b>Webmaster &middot; IEEE Computational Intelligence Society Student Chapter</b><p>Managed the chapter website and digital outreach for technical events</p></div></div>
-      <div class="honour"><svg class="bee" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="24" rx="6" ry="8"/><path d="M20 17 Q10 10 5 17 Q13 19 20 18Z" opacity=".6"/><path d="M20 17 Q30 10 35 17 Q27 19 20 18Z" opacity=".6"/></svg>
-        <div><b>International Achievers Award &middot; Silamboli Foundations (SIMATS)</b><p>Recognised for consistent performance in academics, leadership and student initiatives</p></div></div>
+        <div><b>Forage Job Simulations &middot; JPMorgan Chase, Amazon, British Airways</b><p>Virtual programmes across finance, technology and operations</p></div></div>
     </div>
   </section>
 
@@ -504,22 +505,8 @@
     <h1>The Parlour</h1>
     <p class="lead">Where the young lady sets her work aside for a while, dear reader.</p>
     <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
-    <div class="grid two">
-      <article class="card">
-        <h3>The Reading Chair</h3>
-        <p class="role">Classics &amp; quiet evenings</p>
-        <p>A most devoted reader, dear friend, happiest with a classic in hand: the sort of novel where wit, longing and a well-stocked library all signify. It is little wonder a Regency estate should feel so like home to her.</p>
-        <div class="tags"><span class="tag">Classic Literature</span><span class="tag">Slow Reading</span></div>
-      </article>
-      <article class="card">
-        <h3>The Music Box</h3>
-        <p class="role">On constant rotation</p>
-        <p>When the young lady is at work, the music is unapologetically K-pop. <em>BTS</em> for the ambition and the feeling of it, <em>BLACKPINK</em> for sheer momentum. Good engineering, after all, deserves a good rhythm.</p>
-        <div class="tags"><span class="tag">BTS</span><span class="tag">BLACKPINK</span><span class="tag">K-Pop</span></div>
-      </article>
-    </div>
 
-    <p class="eyebrow" style="margin-top:34px">From Her Pen &middot; Essays</p>
+    <p class="eyebrow" style="margin-top:6px">From Her Pen &middot; Essays</p>
     <div class="essays">
       <article class="essay">
         <h3>On Being a Woman Who Builds</h3>
@@ -543,6 +530,21 @@
         <p class="byline">Jenica A.</p>
       </article>
     </div>
+
+    <div class="grid two" style="margin-top:34px">
+      <article class="card">
+        <h3>The Reading Chair</h3>
+        <p class="role">Classics &amp; quiet evenings</p>
+        <p>A most devoted reader, dear friend, happiest with a classic in hand: the sort of novel where wit, longing and a well-stocked library all signify. It is little wonder a Regency estate should feel so like home to her.</p>
+        <div class="tags"><span class="tag">Classic Literature</span><span class="tag">Slow Reading</span></div>
+      </article>
+      <article class="card">
+        <h3>The Music Box</h3>
+        <p class="role">On constant rotation</p>
+        <p>When the young lady is at work, the music is unapologetically K-pop. <em>BTS</em> for the ambition and the feeling of it, <em>BLACKPINK</em> for sheer momentum. Good engineering, after all, deserves a good rhythm.</p>
+        <div class="tags"><span class="tag">BTS</span><span class="tag">BLACKPINK</span><span class="tag">K-Pop</span></div>
+      </article>
+    </div>
   </section>
 
   <!-- THE SEASON'S CALENDAR -->
@@ -554,7 +556,7 @@
     <div class="timeline">
       <div class="tl-item"><div class="tl-year">2024</div><h3>Foundations</h3><p>She completed the Stanford Machine Learning Specialization and the Google Data Analytics Professional Certificate, and so began to build in earnest.</p></div>
       <div class="tl-item"><div class="tl-year">2025</div><h3>Taking the Lead</h3><p>The young lady took the chair of the IEEE Women in Engineering chapter, and the post of Webmaster at the IEEE Computational Intelligence Society chapter.</p></div>
-      <div class="tl-item"><div class="tl-year">2026</div><h3>The Building Year</h3><p>A most industrious year. She sent Adrian AI and Orbit out to live; competed upon Kaggle (the F1 pit stops at an AUC of 0.948, and irrigation some fifteen per cent the better); presented four posters at the Tech Star Summit; and was honoured with the International Achievers Award.</p></div>
+      <div class="tl-item"><div class="tl-year">2026</div><h3>The Building Year</h3><p>A most industrious year. She sent Adrian AI and Orbit out to live, presented four posters at the Tech Star Summit, wrote her first solo research paper on credit assignment in reinforcement learning, and was honoured with the International Achievers Award. In October she was appointed Membership Coordinator of her IEEE Student Branch.</p></div>
       <div class="tl-item"><div class="tl-year">2028</div><h3>Commencement</h3><p>The young lady is to be presented to the world with a B.Tech in Artificial Intelligence and Machine Learning from Saveetha School of Engineering, SIMATS.</p></div>
     </div>
   </section>
@@ -565,14 +567,14 @@
     <h1>The Correspondence</h1>
     <svg class="sprig" viewBox="0 0 200 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M100 4 V32"/><path d="M100 12 Q80 6 64 14 M100 12 Q120 6 136 14"/><circle cx="100" cy="4" r="2.5" fill="currentColor" stroke="none"/><path d="M10 18 H78 M122 18 H190" stroke-width="0.8"/></svg>
     <div class="letter">
-      <p>Should you wish to begin a correspondence, dear reader, whether upon a project, a collaboration, or a position, the young lady is most warmly disposed to receive your letter.</p>
+      <p>Should you wish to begin a correspondence, dear reader, whether upon research, a collaboration, or a position, the young lady is most warmly disposed to receive your letter.</p>
       <div class="linktree">
+        <a href="mailto:jznica04@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
         <a href="https://linkedin.com/in/jznicaa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7c0-1.67-.03-3.8-2.32-3.8-2.32 0-2.68 1.8-2.68 3.68V24H8z"/></svg>LinkedIn</a>
         <a href="https://github.com/jznica" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.69.92.69 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a>
-        <a href="mailto:jznica04@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
         <a href="https://orbit-rho-seven.vercel.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Orbit &middot; Live</a>
         <a href="https://studymate-ai-fgzgwxe6ijnxyctuwgvgwr.streamlit.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Adrian AI &middot; Live</a>
-        <a href="data:application/pdf;base64,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/h1TWw4lVDRXXXGBivpERjtCB4IJSzHniXYOAaxyJxXXFYG3B9RccMMZ6fDH8OxFTTJ7lrw5HF3Ox2fj6qjwWGDq7eWk5539dH4xuTWS9p4WvS0K3H7Hj0PLnNbMMDpkSO8fss0KpD6yFsDgx1arttL77gDAHipXigjLYIjVIR7pPj+26b25WRW+Q5mi3ejN1evdsIcbPlXyb0xM7Xc28uwNfVSpbFSFJ4IVPoJU60wqtkL4kytT1iFECSKi/ie8n15ItWKCYofGWmPI2fdtRfNWccP1GgZc3bLNXYbCycnn/wJuUO/PDQplbmRzdHJlYW0NCmVuZG9iag0KOCAwIG9iag0KPDwvRjEgOSAwIFIgL0YyIDEwIDAgUiAvRjMgMTEgMCBSID4+DQplbmRvYmoNCjkgMCBvYmoNCjw8L0Jhc2VGb250L0hlbHZldGljYS9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMS9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjEwIDAgb2JqDQo8PC9CYXNlRm9udC9IZWx2ZXRpY2EtQm9sZC9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMi9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjExIDAgb2JqDQo8PC9CYXNlRm9udC9IZWx2ZXRpY2EtT2JsaXF1ZS9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvTmFtZS9GMy9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+DQplbmRvYmoNCjEyIDAgb2JqDQo8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDg+PnN0cmVhbQ0KeJwDAAAAAAENCmVuZHN0cmVhbQ0KZW5kb2JqDQoxMyAwIG9iag0KWyA3IDAgUiBdDQplbmRvYmoNCnhyZWYNCjAgMTQNCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAwMDAxNyAwMDAwMCBuDQowMDAwMDAwMDY2IDAwMDAwIG4NCjAwMDAwMDAxMjIgMDAwMDAgbg0KMDAwMDAwMDIwOSAwMDAwMCBuDQowMDAwMDAwNDE1IDAwMDAwIG4NCjAwMDAwMDA1ODEgMDAwMDAgbg0KMDAwMDAwMDc0MiAwMDAwMCBuDQowMDAwMDAzODUyIDAwMDAwIG4NCjAwMDAwMDM5MDcgMDAwMDAgbg0KMDAwMDAwNDAwNiAwMDAwMCBuDQowMDAwMDA0MTExIDAwMDAwIG4NCjAwMDAwMDQyMTkgMDAwMDAgbg0KMDAwMDAwNDI5OCAwMDAwMCBuDQp0cmFpbGVyDQo8PA0KL1Jvb3QgMSAwIFINCi9JbmZvIDMgMCBSDQovU2l6ZSAxNC9JRFs8NzE1NUNDM0U5QUM5RjIxODA5RTAxQTU5MDMxRjkzREQ+PDcxNTVDQzNFOUFDOUYyMTgwOUUwMUE1OTAzMUY5M0REPl0+Pg0Kc3RhcnR4cmVmDQo0MzI3DQolJUVPRg0K" download="JenicaA_Resume_2026.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>Download my R&eacute;sum&eacute;</a>
+        <a href="JenicaA_Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>Download my R&eacute;sum&eacute;</a>
       </div>
       <p style="margin-top:18px;font-size:.95rem;color:var(--blue)">Chennai, India</p>
       <div class="seal">~ J.A.</div>
@@ -581,9 +583,7 @@
 
 </main>
 
-
-
-<div class="modal" id="modal">
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
   <div class="modal-card">
     <button class="modal-close" onclick="closeProject()" aria-label="Close">&times;</button>
     <h3 id="m-title"></h3>
@@ -594,19 +594,33 @@
   </div>
 </div>
 
-<footer>Jenica A. &middot; Composed in the Bridgerton Manner &middot; MMXXVI</footer>
+<footer>Jenica A. &middot; Composed in the Regency Manner &middot; MMXXVI</footer>
 
 <script>
-  function enter(id){
+  const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ROOMS = ['foyer','study','library','gallery','conservatory','parlour','calendar','correspondence'];
+
+  /* ===== hash routing ===== */
+  function enter(id, opts){
+    if(!ROOMS.includes(id)) id='foyer';
     document.querySelectorAll('.room').forEach(r=>r.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    document.querySelectorAll('nav button[data-room]').forEach(b=>b.classList.toggle('active', b.dataset.room===id));
+    document.querySelectorAll('nav a[data-room]').forEach(a=>{
+      const on=a.dataset.room===id; a.classList.toggle('active',on);
+      if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
     document.getElementById('menu').classList.remove('open');
-    window.scrollTo({top:0, behavior:'smooth'});
+    if(!(opts&&opts.noScroll)) window.scrollTo({top:0, behavior:REDUCED?'auto':'smooth'});
     if(id==='foyer' && window.popGreet) window.popGreet();
   }
+  function go(id){
+    if(location.hash==='#'+id) enter(id); else location.hash=id;
+  }
+  window.addEventListener('hashchange',()=>enter(location.hash.slice(1)));
   function toggleMenu(){ document.getElementById('menu').classList.toggle('open'); }
-  (function(){
+
+  /* ===== drifting petals ===== */
+  if(!REDUCED){
     for(let i=0;i<9;i++){
       const p=document.createElement('div'); p.className='petal';
       const size=8+Math.random()*10;
@@ -617,15 +631,15 @@
       p.style.color = Math.random()>0.5 ? '#5d7a96' : '#c4a35a';
       document.body.appendChild(p);
     }
-  })();
+  }
 
-  /* foyer welcome */
+  /* ===== foyer welcome ===== */
   (function(){
     const greet=document.getElementById('heroGreet');
     const hero=document.querySelector('.cindy-hero');
     const welcomes=[
-      "Dearest gentle reader, welcome to my estate. \u2726",
-      "Vanakam, dear reader. So glad you have called. \u2726",
+      "Dear reader, welcome to my estate. \u2726",
+      "Vanakkam, dear reader. So glad you have called. \u2726",
       "Do come in, reader. Every room awaits you. \u2726",
       "Bonjour, gentle reader. Pray, make yourself at home. \u2726"
     ];
@@ -633,26 +647,43 @@
     window.popGreet=function(){
       greet.textContent=welcomes[Math.floor(Math.random()*welcomes.length)];
       greet.classList.remove('show'); void greet.offsetWidth;
-      if(hero){hero.classList.remove('curtsy'); void hero.offsetWidth; hero.classList.add('curtsy');}
+      if(hero && !REDUCED){hero.classList.remove('curtsy'); void hero.offsetWidth; hero.classList.add('curtsy');}
       clearTimeout(hideTimer);
       setTimeout(()=>greet.classList.add('show'),350);
       hideTimer=setTimeout(()=>greet.classList.remove('show'),5200);
     };
-    popGreet();
   })();
 
-  /* curtain */
+  /* ===== curtain: auto-opens, skipped on repeat visits, deep links & reduced motion ===== */
   (function(){
-    const c=document.getElementById('curtain'); if(!c)return;
-    function open(){c.classList.add('open');setTimeout(()=>c.classList.add('gone'),1650);if(window.popGreet)window.popGreet();}
+    const c=document.getElementById('curtain'); if(!c) return;
+    let seen=false;
+    try{ seen=sessionStorage.getItem('ja_curtain')==='1'; }catch(e){}
+    const deep=location.hash && location.hash!=='#foyer';
+    if(seen||deep||REDUCED){ c.classList.add('gone'); return; }
+    let opened=false;
+    function open(){
+      if(opened) return; opened=true;
+      try{ sessionStorage.setItem('ja_curtain','1'); }catch(e){}
+      c.classList.add('open');
+      setTimeout(()=>c.classList.add('gone'),1450);
+      if(window.popGreet) window.popGreet();
+    }
     c.addEventListener('click',open);
+    c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();open();} });
+    setTimeout(open,1300);
   })();
-  /* candlelight */
+
+  /* initial room */
+  enter(location.hash.slice(1)||'foyer',{noScroll:true});
+
+  /* ===== candlelight ===== */
   (function(){
     const b=document.getElementById('candleBtn');
-    b.addEventListener('click',()=>{document.body.classList.toggle('candlelit');b.classList.toggle('active');});
+    b.addEventListener('click',()=>{const on=document.body.classList.toggle('candlelit');b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});
   })();
-  /* string quartet (gentle waltz, off by default) */
+
+  /* ===== string quartet (gentle waltz, off by default) ===== */
   (function(){
     const btn=document.getElementById('musicBtn');
     let actx,master,playing=false,timer,step=0;
@@ -679,28 +710,30 @@
         actx=actx||new (window.AudioContext||window.webkitAudioContext)();
         if(actx.state==='suspended')actx.resume();
         if(!master){master=actx.createGain();master.gain.value=0.5;master.connect(actx.destination);}
-        playing=true;btn.classList.add('active');schedule();
-      }else{playing=false;btn.classList.remove('active');clearTimeout(timer);}
+        playing=true;btn.classList.add('active');btn.setAttribute('aria-pressed','true');schedule();
+      }else{playing=false;btn.classList.remove('active');btn.setAttribute('aria-pressed','false');clearTimeout(timer);}
     });
   })();
-  /* project deep-dives */
+
+  /* ===== project deep-dives ===== */
   const PROJECTS={
     adrian:{title:"Adrian AI",role:"RAG-Powered Study Companion \u00b7 2026",
       body:["A clever companion that reads a reader\u2019s documents and answers only from what they truly contain, built upon her own pipeline for chunking, tokenisation and retrieval, with no borrowed framework to lean upon.","Should one model falter, a chain of five (DeepSeek, GLM, Gemma, Qwen and Llama) attends in its place, so the conversation never stumbles. It offers a themed interface, a memory of all that has passed, and support for many documents at once, deployed upon Streamlit Cloud at not a penny of cost."],
       tags:["RAG","Llama 3.2","OpenRouter","Streamlit"],live:"https://studymate-ai-fgzgwxe6ijnxyctuwgvgwr.streamlit.app/",code:"https://github.com/jznica"},
     orbit:{title:"Orbit",role:"Cross-College Collaboration Platform \u00b7 2026",
-      body:["A drawing room for student builders, raised entirely by her own hand. Within one finds secure entry by passcode, a lively feed of reactions, a clever matchmaker for collaborators by way of the Anthropic API, and a dashboard for keeping good order, all without a single borrowed framework.","It carries its own design system, with hand-drawn branding and graceful animation, and was shipped as a single elegant file, ready to be installed like any other."],
+      body:["A drawing room for student builders, raised entirely by her own hand. Within one finds secure entry by passcode, a lively feed of reactions, a matchmaker for collaborators by way of the Anthropic API, and a dashboard for keeping good order.","It carries its own design system, with hand-drawn branding and graceful animation, and was shipped as a single elegant file, ready to be installed like any other app."],
       tags:["JavaScript","Anthropic API","PWA","Design System"],live:"https://orbit-rho-seven.vercel.app/",code:"https://github.com/jznica"},
     f1:{title:"Predicting F1 Pit Stops",role:"Kaggle Competition \u00b7 2026",
-      body:["A spirited wager upon the racing season, forecasting the pit stops from the smallest of signs: the wear of a tyre, the drift of lap times, the keeping of stints and the progress of the race.","Three fine models (LightGBM, XGBoost and CatBoost) were trained with five-fold cross-validation and blended together with great care, reaching an AUC of 0.948 and a place of 971 out of 1758, the upper half of the field."],
+      body:["A spirited wager upon the racing season, forecasting the pit stops from the smallest of signs: the wear of a tyre, the drift of lap times, the keeping of stints and the progress of the race.","Three fine models (LightGBM, XGBoost and CatBoost) were trained with five-fold cross-validation and blended together with great care, reaching an AUC of 0.948."],
       tags:["LightGBM","XGBoost","CatBoost","Ensembling"],code:"https://github.com/jznica"},
     irrigation:{title:"Predicting Irrigation Need",role:"Kaggle Competition \u00b7 2026",
-      body:["A thorough study across some ten thousand samples, by which the young lady raised her accuracy by a handsome fifteen per cent through careful feature work and patient examination.","More than twenty new features were fashioned by hand, and the labour of experiment cut by near a third with automated cross-validation."],
+      body:["A thorough study across some ten thousand samples, by which the young lady raised her accuracy fifteen per cent above her first baseline through careful feature work and patient examination.","More than twenty new features were fashioned by hand, and the labour of experiment cut by near a third with automated cross-validation."],
       tags:["Scikit-learn","XGBoost","EDA"],code:"https://github.com/jznica"}
   };
-  const ORDER=['adrian','orbit','f1','irrigation'];
+  let lastFocus=null;
   function openProject(k){
     const p=PROJECTS[k]; if(!p)return;
+    lastFocus=document.activeElement;
     document.getElementById('m-title').textContent=p.title;
     document.getElementById('m-role').textContent=p.role;
     document.getElementById('m-body').innerHTML=p.body.map(t=>'<p>'+t+'</p>').join('');
@@ -709,28 +742,36 @@
     if(p.code)a+='<a class="btn ghost" href="'+p.code+'" target="_blank" rel="noopener">View Code</a>';
     document.getElementById('m-actions').innerHTML=a;
     document.getElementById('modal').classList.add('show');
+    document.querySelector('.modal-close').focus();
   }
-  function closeProject(){document.getElementById('modal').classList.remove('show');}
+  function closeProject(){
+    document.getElementById('modal').classList.remove('show');
+    if(lastFocus) lastFocus.focus();
+  }
   document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeProject();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProject();});
-  document.querySelectorAll('#gallery .card').forEach((c,i)=>{
-    const key=ORDER[i]; if(!key)return;
+  document.querySelectorAll('#gallery .card[data-project]').forEach(c=>{
+    const key=c.dataset.project;
     c.classList.add('clickable');
-    c.addEventListener('click',()=>openProject(key));
+    c.setAttribute('tabindex','0'); c.setAttribute('role','button');
+    c.setAttribute('aria-label',c.querySelector('h3').textContent+', view details');
+    c.addEventListener('click',e=>{ if(!e.target.closest('a')) openProject(key); });
+    c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(key);} });
     const m=document.createElement('span'); m.className='more'; m.innerHTML='View details &#10022;'; c.appendChild(m);
   });
 
-  /* cursor sparkle trail */
-  (function(){
+  /* ===== cursor sparkle trail (mouse only) ===== */
+  if(!REDUCED && window.matchMedia('(pointer: fine)').matches){
     let last=0;
     const gold=['#d8bd77','#c4a35a','#f3e1a6'];
     const SPARK='<svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0 L6 4 L10 5 L6 6 L5 10 L4 6 L0 5 L4 4 Z"/></svg>';
     const PETAL='<svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0 C7 3 7 6 5 9 C3 6 3 3 5 0Z"/></svg>';
-    function spark(x,y){
+    window.addEventListener('mousemove',e=>{
+      const now=Date.now(); if(now-last<34)return; last=now;
       const s=document.createElement('div'); s.className='spark';
       const petal=Math.random()<0.3;
       const size=(petal?7:5)+Math.random()*6;
-      s.style.left=x+'px'; s.style.top=y+'px';
+      s.style.left=e.clientX+'px'; s.style.top=e.clientY+'px';
       s.style.width=s.style.height=size+'px';
       s.style.color=petal?'#9db4cc':gold[Math.floor(Math.random()*gold.length)];
       s.style.setProperty('--dx',(Math.random()*22-11)+'px');
@@ -739,14 +780,10 @@
       s.innerHTML=petal?PETAL:SPARK;
       document.body.appendChild(s);
       setTimeout(()=>s.remove(),760);
-    }
-    window.addEventListener('mousemove',e=>{
-      const now=Date.now(); if(now-last<34)return; last=now;
-      spark(e.clientX,e.clientY);
     });
-  })();
+  }
 
-  /* hidden easter egg: tap the bee crest x3 */
+  /* ===== hidden easter egg: tap the bee crest x3 ===== */
   (function(){
     const crest=document.querySelector('.crest'); if(!crest)return;
     let taps=0,t;
@@ -755,13 +792,13 @@
       if(taps>=3){taps=0;egg();}
     });
     function egg(){
-      if(typeof enter==='function') enter('foyer');
+      go('foyer');
       setTimeout(()=>{
         const hero=document.querySelector('.cindy-hero');
-        if(hero){hero.classList.remove('spin'); void hero.offsetWidth; hero.classList.add('spin'); setTimeout(()=>hero.classList.remove('spin'),1350);}
+        if(hero && !REDUCED){hero.classList.remove('spin'); void hero.offsetWidth; hero.classList.add('spin'); setTimeout(()=>hero.classList.remove('spin'),1350);}
         const g=document.getElementById('heroGreet');
         if(g){g.textContent='You found me! \u2726'; g.classList.remove('show'); void g.offsetWidth; g.classList.add('show'); setTimeout(()=>g.classList.remove('show'),2900);}
-        shower();
+        if(!REDUCED) shower();
       },170);
     }
     function shower(){
